@@ -74,6 +74,7 @@ function TiltCard({
 							target="_blank"
 							rel="noopener noreferrer"
 							onClick={(e) => e.stopPropagation()}
+							aria-label={`Apri ${project.title} in produzione`}
 							className="p-3 glass rounded-xl text-white hover:text-primary transition-colors"
 						>
 							<ExternalLink size={20} />
@@ -84,6 +85,7 @@ function TiltCard({
 						target="_blank"
 						rel="noopener noreferrer"
 						onClick={(e) => e.stopPropagation()}
+						aria-label={`Codice sorgente di ${project.title} su GitHub`}
 						className="p-3 glass rounded-xl text-white hover:text-primary transition-colors"
 					>
 						<GitHubIcon size={20} />

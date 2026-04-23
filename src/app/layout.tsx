@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 			"Junior Full-Stack Developer specializzato in AI Integration. Next.js 15, FastAPI, React 19. Contributor su forbes.it.",
 		images: [
 			{
-				url: "/og-image.png",
+				url: "/opengraph-image",
 				width: 1200,
 				height: 630,
 				alt: "Jomar Navarro — Junior Full-Stack Developer",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 		title: "Jomar Navarro — Junior Full-Stack Developer",
 		description:
 			"Junior Full-Stack Developer specializzato in AI Integration. Next.js 15, FastAPI, React 19.",
-		images: ["/og-image.png"],
+		images: ["/opengraph-image"],
 	},
 	robots: {
 		index: true,

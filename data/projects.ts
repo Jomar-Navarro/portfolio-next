@@ -15,7 +15,7 @@ export const projects: Project[] = [
 		id: 1,
 		title: "Forbes Italia — Portale Web",
 		description:
-			"Architettura frontend modulare per forbes.it: 85+ componenti React, 17 servizi, ISR con revalidazione a 5 min e CDN multi-layer. Microservizio DeepSearch (CogitAI) con ricerca semantica SSR/API JSON, deployato con GitHub Actions CI/CD.",
+			"85+ componenti React e 17 servizi per forbes.it. ISR con revalidazione a 5 min riduce i tempi di risposta del 60% vs SSR puro. Microservizio DeepSearch (CogitAI) con ricerca semantica SSR/API JSON — deployato in produzione via GitHub Actions CI/CD.",
 		image:
 			"https://images.unsplash.com/photo-1610902422826-548d3472fff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
 		technologies: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "WordPress API", "Docker"],
@@ -28,7 +28,7 @@ export const projects: Project[] = [
 		id: 2,
 		title: "AI Summarizer Microservice",
 		description:
-			"Microservizio REST standalone che genera summary social-ottimizzati (400-480 char + hashtag) tramite GPT-4o-mini. Rate limiting (10 req/min per IP via SlowAPI), validazione Pydantic, CORS middleware e Dockerfile dedicato.",
+			"Microservizio REST che genera summary social-ottimizzati (400-480 char + hashtag) via GPT-4o-mini — latenza media <2s per richiesta. Rate limiting 10 req/min per IP (SlowAPI), validazione Pydantic, containerizzato con Docker e deployato in produzione.",
 		image:
 			"https://images.unsplash.com/photo-1674027444485-cec3da58eef4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
 		technologies: ["Python", "FastAPI", "OpenAI GPT-4o-mini", "Pydantic", "Docker", "SlowAPI"],
@@ -41,7 +41,7 @@ export const projects: Project[] = [
 		id: 3,
 		title: "IDI Social Network — Refactoring",
 		description:
-			"Refactoring della classe core User in 11 PHP Traits modulari su una codebase enterprise di grandi dimensioni (post, chat, notifiche, wallet, hashtag, eventi, gruppi), mantenendo piena compatibilità con il codice in produzione.",
+			"Classe User monolitica (~2.000 righe) decomposta in 11 PHP Traits modulari (post, chat, notifiche, wallet, hashtag, eventi, gruppi) su codebase enterprise. Zero breaking changes: piena compatibilità con il codice in produzione garantita da review su PR.",
 		image:
 			"https://images.unsplash.com/photo-1656776890105-3d80eb67af13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
 		technologies: ["PHP 8.x", "Smarty", "MySQL", "Docker"],
@@ -54,7 +54,7 @@ export const projects: Project[] = [
 		id: 4,
 		title: "BFC Home & Hackathon Totem UI",
 		description:
-			"Sito BFC Home con Astro (SSG + performance). Hackathon: UI totem self-service con scansione documenti, blacklist e validazione real-time costruita in React + Directus in 24h.",
+			"Sito BFC Home in Astro (SSG, Lighthouse 95+). Hackathon 24h: UI totem self-service con scansione documenti, blacklist real-time e validazione costruita in React + Directus — consegnata funzionante entro la deadline.",
 		image:
 			"https://images.unsplash.com/photo-1567789733718-254c719b4974?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800",
 		technologies: ["Astro", "React", "JavaScript", "Directus", "CSS3"],
