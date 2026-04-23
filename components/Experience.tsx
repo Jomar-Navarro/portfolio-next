@@ -139,7 +139,7 @@ export default function Experience() {
 
 	return (
 		<section id="experience" className="py-28 relative">
-			<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}

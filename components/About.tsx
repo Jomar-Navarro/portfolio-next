@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ImageWithFallback } from "@/../components/figma/ImageWithFallBack";
+import Image from "next/image";
 import Coding from "../public/static/img/coding.png";
 import { highlights, stackTags } from "@/../data/about";
 
 export default function About() {
 	return (
 		<section id="about" className="py-28 relative">
-			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Section header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -62,10 +62,13 @@ export default function About() {
 								className="relative glass gradient-border rounded-3xl overflow-hidden"
 								style={{ aspectRatio: "4/3" }}
 							>
-								<ImageWithFallback
-									src={Coding.src}
-									alt="Developer workspace"
-									className="w-full h-full object-cover"
+								<Image
+									src={Coding}
+									alt="Developer workspace — Jomar Navarro"
+									fill
+									className="object-cover"
+									sizes="(max-width: 768px) 100vw, 400px"
+									priority
 								/>
 								{/* Dark overlay at bottom */}
 								<div

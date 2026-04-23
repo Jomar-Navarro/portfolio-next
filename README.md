@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jomar Navarro — Portfolio
 
-## Getting Started
+Portfolio personale di Jomar Navarro, Junior Full-Stack Developer specializzato in AI Integration.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Layer | Tecnologie |
+|---|---|
+| Frontend | Next.js 16, React 19, TypeScript, Tailwind CSS v4 |
+| Animazioni | Motion for React (v12) |
+| Styling | Glass morphism custom, CSS layers, dark/light mode |
+| Deploy | Vercel |
+
+## Features
+
+- Glass morphism design system custom (`globals.css` utilities)
+- Animazioni scroll-driven e 3D tilt sulle project card
+- Dark/Light mode con persistenza `localStorage`
+- Dati separati dai componenti (`/data`)
+- `next/image` con ottimizzazione automatica
+- Metadata SEO completo + Open Graph + sitemap/robots
+- CI/CD con GitHub Actions (typecheck + lint + build)
+- Fully responsive
+
+## Struttura
+
+```
+components/   → UI components (Hero, About, Experience, Projects, Skills, Contact, Footer)
+data/         → Dati hardcoded separati (hero, about, experience, projects, skills, contact, footer)
+src/app/      → Next.js App Router (layout, page, sitemap, robots)
+public/       → Asset statici
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locale
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Apri [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Build & deploy
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build   # build produzione
+npm run lint    # ESLint
+npx tsc --noEmit # TypeScript check
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Il deploy è automatico su Vercel ad ogni push su `main`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contatti
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: jomarnavarro201@gmail.com
+- LinkedIn: [linkedin.com/in/jomar-navarro](https://www.linkedin.com/in/jomar-navarro/)
+- GitHub: [github.com/Jomar-Navarro](https://github.com/Jomar-Navarro)

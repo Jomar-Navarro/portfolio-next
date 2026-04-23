@@ -12,10 +12,58 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? "https://jomarnavarro.dev";
+
 export const metadata: Metadata = {
-	title: "Portfolio",
+	metadataBase: new URL(BASE_URL),
+	title: {
+		default: "Jomar Navarro — Junior Full-Stack Developer | Torino",
+		template: "%s | Jomar Navarro",
+	},
 	description:
-		"A personal portfolio website built with Next.js and Tailwind CSS. Showcasing projects, skills, and experience in web development.",
+		"Junior Full-Stack Developer specializzato in AI Integration. Next.js 15, FastAPI, React 19, TypeScript. Contributor su forbes.it. Disponibile per nuovi progetti a Torino.",
+	keywords: [
+		"Full-Stack Developer",
+		"Next.js",
+		"React",
+		"TypeScript",
+		"FastAPI",
+		"AI Integration",
+		"Torino",
+		"Jomar Navarro",
+	],
+	authors: [{ name: "Jomar Navarro", url: BASE_URL }],
+	creator: "Jomar Navarro",
+	openGraph: {
+		type: "website",
+		locale: "it_IT",
+		url: BASE_URL,
+		siteName: "Jomar Navarro — Portfolio",
+		title: "Jomar Navarro — Junior Full-Stack Developer",
+		description:
+			"Junior Full-Stack Developer specializzato in AI Integration. Next.js 15, FastAPI, React 19. Contributor su forbes.it.",
+		images: [
+			{
+				url: "/og-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Jomar Navarro — Junior Full-Stack Developer",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Jomar Navarro — Junior Full-Stack Developer",
+		description:
+			"Junior Full-Stack Developer specializzato in AI Integration. Next.js 15, FastAPI, React 19.",
+		images: ["/og-image.png"],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: { index: true, follow: true, "max-image-preview": "large" },
+	},
+	alternates: { canonical: BASE_URL },
 };
 
 export default function RootLayout({
@@ -25,7 +73,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
-			lang="en"
+			lang="it"
 			className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col">{children}</body>

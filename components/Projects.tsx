@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform } from "motion/react";
 import { ExternalLink } from "lucide-react";
 
 import { GitHubIcon } from "@/../components/Icon";
-import { ImageWithFallback } from "@/../components/figma/ImageWithFallBack";
+import Image from "next/image";
 import { useRef, MouseEvent } from "react";
 import { projects } from "@/../data/projects";
 
@@ -53,10 +53,12 @@ function TiltCard({
 		>
 			{/* Image */}
 			<div className="aspect-video overflow-hidden relative">
-				<ImageWithFallback
+				<Image
 					src={project.image}
 					alt={project.title}
-					className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+					fill
+					className="object-cover transition-transform duration-500 group-hover:scale-105"
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
 				/>
 				{/* Overlay */}
 				<div
@@ -192,7 +194,7 @@ function TiltCard({
 export default function Projects() {
 	return (
 		<section id="projects" className="py-28 relative">
-			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
