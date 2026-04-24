@@ -27,6 +27,7 @@ function useTypewriter(texts: string[], speed = 60, pause = 2000) {
 				speed / 2,
 			);
 		} else if (deleting && displayed.length === 0) {
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			setDeleting(false);
 			setIndex((i) => (i + 1) % texts.length);
 		}
@@ -165,7 +166,7 @@ export default function Hero() {
 							lineHeight: 1.05,
 						}}
 					>
-						<span style={{ color: "rgba(226,232,240,0.3)" }}>Hi, I'm </span>
+						<span style={{ color: "rgba(226,232,240,0.3)" }}>Hi, I&apos;m </span>
 						<span className="gradient-text">Jomar Navarro</span>
 					</h1>
 				</motion.div>
