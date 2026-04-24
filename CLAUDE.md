@@ -61,10 +61,11 @@ npm run build    # build produzione
 
 ## CI/CD
 GitHub Actions (`.github/workflows/ci.yml`) esegue su ogni push/PR a main:
-1. `npx tsc --noEmit`
-2. `npm run lint`
-3. `npm run test`
-4. `npm run build`
+1. `npm run lint`
+2. `npm run test`
+3. `npm run build` (include il type-check TypeScript internamente)
+
+Non usare `npx tsc --noEmit` come step CI standalone: Next.js genera `.next/types/app-router.d.ts` solo durante la build, e `next-env.d.ts` lo referenzia — tsc fallisce su CI se `.next/` non esiste ancora.
 
 La CI deve essere verde prima di ogni merge.
 

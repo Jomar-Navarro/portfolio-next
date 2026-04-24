@@ -16,14 +16,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
         run: npm ci
-
-      - name: TypeScript check
-        run: npx tsc --noEmit
 
       - name: Lint
         run: npm run lint
@@ -31,5 +28,5 @@ jobs:
       - name: Test
         run: npm run test
 
-      - name: Build
+      - name: Build (includes TypeScript check)
         run: npm run build
